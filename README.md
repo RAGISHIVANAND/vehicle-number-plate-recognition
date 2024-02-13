@@ -8,6 +8,9 @@ Steps involved in License Plate Recognition
 1. License Plate Detection
 Let’s take a sample image of a car and start with detecting the License Plate on that car. We will then use the same image for Character Segmentation and Character Recognition as well.
 
+![11111111](https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/assets/126608984/b3b6a686-d1a6-4a64-95bc-997594dc04ab)
+
+
 
 Circuit Digest Article:[ https://circuitdigest.com/microcontro...](https://circuitdigest.com/microcontroller-projects/license-plate-recognition-using-raspberry-pi-and-opencv)
 

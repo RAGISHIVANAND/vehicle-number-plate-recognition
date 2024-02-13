@@ -44,6 +44,10 @@ for contour in contours:
         break
 
 
+
+https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/issues/3#issuecomment-1941434608
+
+
 Once we have found the right counter we save it in a variable called screenCnt and then draw a rectangle box around it to make sure we have detected the license plate correctly.
 
 Now that we know where the number plate is, the remaining information is pretty much useless for us. So we can proceed with masking the entire picture except for the place where the number plate

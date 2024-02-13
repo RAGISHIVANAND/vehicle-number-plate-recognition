@@ -1,4 +1,4 @@
-Circuit Digest Article: https://circuitdigest.com/microcontro...
+Circuit Digest Article:[ https://circuitdigest.com/microcontro...](https://circuitdigest.com/microcontroller-projects/license-plate-recognition-using-raspberry-pi-and-opencv)
 
 
 OpenCV Documentation: https://docs.opencv.org/4.5.0/

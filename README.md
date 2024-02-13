@@ -39,6 +39,12 @@ The syntax will be destination_image = cv2.Canny(source_image, thresholdValue 1,
 
 ![22222222](https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/assets/126608984/5760025c-214f-4a8d-9978-1a781690a99f)
 
+Step 3: Now we can start Find Contours and Apply Mask
+
+keypoints = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours = imutils.grab_contours(keypoints)
+contours = sorted(contours, key=cv2.contourArea, reverse=True)[:10]
+
 
 
 

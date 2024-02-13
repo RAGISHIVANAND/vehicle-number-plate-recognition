@@ -19,6 +19,36 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 plt.imshow(cv2.cvtColor(gray, cv2.COLOR_BGR2RGB))
 
 
+Once the counters have been detected we sort them from big to small and consider only the first 10 results ignoring the others. In our image the counter could be anything that has a closed surface but of all the obtained results the license plate number will also be there since it is also a closed surface.
+
+To filter the license plate image among the obtained results, we will loop though all the results and check which has a rectangle shape contour with four sides and closed figure. Since a license plate would definitely be a rectangle four sided figure.
+
+
+location = None
+for contour in contours:
+    approx = cv2.approxPolyDP(contour, 10, True)
+    if len(approx) == 4:
+        location = approx
+        break
+
+
+Once we have found the right counter we save it in a variable called screenCnt and then draw a rectangle box around it to make sure we have detected the license plate correctly.
+
+Now that we know where the number plate is, the remaining information is pretty much useless for us. So we can proceed with masking the entire picture except for the place where the number plate
+
+
+mask = np.zeros(gray.shape, np.uint8)
+new_image = cv2.drawContours(mask, [location], 0,255, -1)
+new_image = cv2.bitwise_and(img, img, mask=mask)
+
+The masked new image will appear something like below
+
+![3333333](https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/assets/126608984/24657ea9-5661-465e-bd10-9782f8d7e64a)
+
+
+        
+
+
 Resizing will help us to avoid any problems with bigger resolution images, make sure the number plate still remains in the frame after resizing. Gray scaling is common in all image processing steps. This speeds up other following process sine we no longer have to deal with the color details when processing an image. The image would be transformed something like this when this step is done
 
 ![11111111](https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/assets/126608984/b3b6a686-d1a6-4a64-95bc-997594dc04ab)

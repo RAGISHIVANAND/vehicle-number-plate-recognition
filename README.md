@@ -23,6 +23,18 @@ Once the counters have been detected we sort them from big to small and consider
 
 To filter the license plate image among the obtained results, we will loop though all the results and check which has a rectangle shape contour with four sides and closed figure. Since a license plate would definitely be a rectangle four sided figure.
 
+Some basic Git commands are:
+```
+git status
+git add
+location = None
+for contour in contours:
+    approx = cv2.approxPolyDP(contour, 10, True)
+    if len(approx) == 4:
+        location = approx
+        break
+git commit
+```
 
 location = None
 for contour in contours:

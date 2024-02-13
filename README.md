@@ -37,7 +37,10 @@ The next step is interesting where we perform edge detection. There are many way
 
 The syntax will be destination_image = cv2.Canny(source_image, thresholdValue 1, thresholdValue 2). The Threshold Vale 1 and Threshold Value 2 are the minimum and maximum threshold values. Only the edges that have an intensity gradient more than the minimum threshold value and less than the maximum threshold value will be displayed. The resulting image is shown below
 
-https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/issues/2#issue-2132198843
+![22222222](https://github.com/RAGISHIVANAND/vehicle-number-plate-recognition/assets/126608984/5760025c-214f-4a8d-9978-1a781690a99f)
+
+
+
 
 
 
